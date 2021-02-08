@@ -4,37 +4,16 @@ import router from "./router";
 import Browser from "@/behaviors/Browser";
 import BaseException from "@/exception/Base";
 import store from "./store";
-import echarts from "echarts";
+// import echarts from "echarts";
 
 import 'normalize.css';
 import './scss/global.scss'
-import '@/assets/iconfont/iconfont.css';
-import 'element-ui/lib/theme-chalk/index.css';
+// import '@/assets/iconfont/iconfont.css';
+// import 'element-ui/lib/theme-chalk/index.css';
 
-import { Message, MessageBox, Menu, Submenu, MenuItem, MenuItemGroup, Table, TableColumn, Switch, Button, Tree, Input,
-  Header, Aside, Footer, Main, Container
-} from 'element-ui';
+import 'github-markdown-css'
+import 'highlight.js/styles/github.css'
 
-
-Vue.prototype.$message = Message;
-Vue.prototype.$confirm = MessageBox.confirm;
-Vue.prototype.$echarts = echarts;
-
-Vue.use(Menu);
-Vue.use(MenuItem);
-Vue.use(Submenu)
-Vue.use(MenuItemGroup)
-Vue.use(Table)
-Vue.use(TableColumn)
-Vue.use(Switch)
-Vue.use(Button)
-Vue.use(Tree)
-Vue.use(Header)
-Vue.use(Aside)
-Vue.use(Footer)
-Vue.use(Main)
-Vue.use(Container)
-Vue.use(Input)
 
 
 /**

@@ -26,6 +26,25 @@ module.exports = {
   chainWebpack: config => {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
     types.forEach(type => addStyleResource(config.module.rule('stylus').oneOf(type)))
+    config.module.rule('md')
+            .test(/\.md/)
+            .use('vue-loader')
+            .loader('vue-loader')
+            .end()
+            .use('vue-markdown-loader')
+            .loader('vue-markdown-loader/lib/markdown-compiler')
+            .options({
+                raw: true,
+                preprocess: function (MarkdownIt, Source) {
+                  MarkdownIt.renderer.rules.table_open = function () {
+                    return '<div class="table-container"><table class="table">'
+                  };
+                  MarkdownIt.renderer.rules.table_close = function () {
+                    return '</table></div>'
+                  };
+                  return Source
+                }
+            })
   }
 
 }

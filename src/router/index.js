@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import BuriedPoint from '@/behaviors/BuriedPoint'
 import Index from '@/views/Index'
-
+import BlogDetail from '@/views/BlogDetail'
 import other from '@/router/other'
 
 Vue.use(Router)
@@ -12,6 +12,11 @@ let routers = [
     path: '/',
     name: 'Index',
     component: Index
+  },
+  {
+    path: '/detail/:id',
+    name: 'BlogDetail',
+    component: BlogDetail
   },
   
   ...other
