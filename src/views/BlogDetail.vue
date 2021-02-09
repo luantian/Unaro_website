@@ -22,6 +22,9 @@ export default {
   async created () {
     let data = await BlogModel.getData()
     console.log('data', data)
+  },
+  mounted () {
+    
   }
 }
 </script>
