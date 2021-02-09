@@ -3,13 +3,14 @@ const proxyUrl = 'http://192.168.101.205:9091';
 
 
 module.exports = {
+  productionSourceMap: false,
   devServer: {
     proxy: {
       '/api': {  //使用"/api"来代替"http://f.apiplus.c"
         target: proxyUrl, //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-        '^/api': '/' //路径重写
+          '^/api': '/' //路径重写
         }
       }
     }

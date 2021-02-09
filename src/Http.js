@@ -104,9 +104,13 @@ class Http {
   static getParams(params) {
     let url = params.url;
     let data = params.data;
-    console.log("aaaaa", data)
+    const _public = '/public'
     if (url.indexOf('http') === -1) {
       url = `${baseUrl}${version}${url}`;
+    }
+    if (url.indexOf(_public) === 0) {
+      url = `${version}${url.replace(_public, '')}`
+      console.log('url', url)
     }
     return { url, data };
   }
@@ -114,7 +118,6 @@ class Http {
   static proxyPromise(method, url, data) {
     let par = {};
     if (['post', 'put', 'patch'].includes(method)) {
-      console.log('data1111', data)
       par = data
     }
     if (['get', 'delete'].includes(method)) {

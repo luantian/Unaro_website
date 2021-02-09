@@ -16,7 +16,6 @@ class Base extends Http {
   }
 
   static success(callback, data, vm) {
-
     /**
      * 204 - 删除成功
      * 201 - 创建或修改成功

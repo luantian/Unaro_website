@@ -8,6 +8,7 @@
 
 <script>
 
+import BlogModel from '@/models/Blog'
 import Markdown from '/public/md/test1.md'
 
 export default {
@@ -17,6 +18,10 @@ export default {
     return {
       
     }
+  },
+  async created () {
+    let data = await BlogModel.getData()
+    console.log('data', data)
   }
 }
 </script>
@@ -35,4 +40,14 @@ export default {
 			padding: 15px;
 		}
 	}
+
+  // ::v-deep .hljs-keyword {
+  //   color: red;
+  // }
+
+  // ::v-deep .markdown-body pre {
+  //   background: red;
+  //   border: 1px solid green;
+  //   border-radius: 100px;
+  // }
 </style>
