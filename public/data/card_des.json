@@ -1,0 +1,62 @@
+{
+  "1": [
+    {
+      "type": "img",
+      "content": "/img/img_Blog_describ@2x.png"
+    },
+    {
+      "type": "text",
+      "content": "card1 evaluated CPU across each of the machines, it became apparent that what’s inside each machine matters. We evaluated each cloud’s CPU performance using the CoreMark version 1.0 benchmark. CoreMark is open-source, cloud-agnostic, and tests against various real-world workloads like list sort and search. We reported the average number of iterations/second for both the single-core results as well as the 16-core results."
+    },
+    {
+      "type": "title",
+      "content": "1.On all things throughput, GCP is king"
+    },
+    {
+      "type": "text",
+      "content": "As we evaluated CPU across each of the machines, it became apparent that what’s inside each machine matters. We evaluated each cloud’s CPU performance using the CoreMark version 1.0 benchmark. CoreMark is open-source, cloud-agnostic, and tests against various real-world workloads like list sort and search. We reported the average number of iterations/second for both the single-core results as well as the 16-core results."
+    },
+    {
+      "type": "text",
+      "content": "As we evaluated CPU across each of the machines, it became apparent that what’s inside each machine matters. We evaluated each cloud’s CPU performance using the CoreMark version 1.0 benchmark. CoreMark is open-source, cloud-agnostic, and tests against various real-world workloads like list sort and search. We reported the average number of iterations/second for both the single-core results as well as the 16-core results."
+    },
+    {
+      "type": "title",
+      "content": "2.On all things throughput, GCP is king"
+    },
+    {
+      "type": "text",
+      "content": "As we evaluated CPU across each of the machines, it became apparent that what’s inside each machine matters. We evaluated each cloud’s CPU performance using the CoreMark version 1.0 benchmark. CoreMark is open-source, cloud-agnostic, and tests against various real-world workloads like list sort and search. We reported the average number of iterations/second for both the single-core results as well as the 16-core results."
+    }
+  ],
+  "2": [
+    {
+      "type": "img",
+      "content": "/img/img_Blog_describ@2x.png"
+    },
+    {
+      "type": "text",
+      "content": "card2 we evaluated CPU across each of the machines, it became apparent that what’s inside each machine matters. We evaluated each cloud’s CPU performance using the CoreMark version 1.0 benchmark. CoreMark is open-source, cloud-agnostic, and tests against various real-world workloads like list sort and search. We reported the average number of iterations/second for both the single-core results as well as the 16-core results."
+    },
+    {
+      "type": "title",
+      "content": "1.On all things throughput, GCP is king"
+    },
+    {
+      "type": "text",
+      "content": "As we evaluated CPU across each of the machines, it became apparent that what’s inside each machine matters. We evaluated each cloud’s CPU performance using the CoreMark version 1.0 benchmark. CoreMark is open-source, cloud-agnostic, and tests against various real-world workloads like list sort and search. We reported the average number of iterations/second for both the single-core results as well as the 16-core results."
+    },
+    {
+      "type": "text",
+      "content": "As we evaluated CPU across each of the machines, it became apparent that what’s inside each machine matters. We evaluated each cloud’s CPU performance using the CoreMark version 1.0 benchmark. CoreMark is open-source, cloud-agnostic, and tests against various real-world workloads like list sort and search. We reported the average number of iterations/second for both the single-core results as well as the 16-core results."
+    },
+    {
+      "type": "title",
+      "content": "2.On all things throughput, GCP is king"
+    },
+    {
+      "type": "text",
+      "content": "As we evaluated CPU across each of the machines, it became apparent that what’s inside each machine matters. We evaluated each cloud’s CPU performance using the CoreMark version 1.0 benchmark. CoreMark is open-source, cloud-agnostic, and tests against various real-world workloads like list sort and search. We reported the average number of iterations/second for both the single-core results as well as the 16-core results."
+    }
+  ]
+}

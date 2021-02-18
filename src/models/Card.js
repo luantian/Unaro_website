@@ -1,22 +1,22 @@
 import Base from '@/models/Base'
 
-class Blog extends Base {
+class Card extends Base {
   constructor () {
     super()
   }
 
   static async getData () {
     return await this.get({
-      url: '/public/data/blog.json'
+      url: '/public/data/card.json'
     })
   }
 
   static async getDetail () {
     return await this.get({
-      url: '/public/data/blog_des.json'
+      url: '/public/data/card_des.json'
     })
   }
 
 }
 
-export default Blog
+export default Card

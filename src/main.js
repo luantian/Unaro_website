@@ -14,13 +14,15 @@ import './scss/global.scss'
 import 'github-markdown-css'
 import 'highlight.js/styles/github.css'
 
-import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/ambiance.css'
 import 'codemirror/theme/cobalt.css'
 import 'codemirror/mode/javascript/javascript'
 
-Vue.use(codemirror)
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
 
 /**
  * 浏览器关闭之前需要的操作

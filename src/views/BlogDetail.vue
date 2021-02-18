@@ -1,56 +1,98 @@
 <template>
   <div class="blog-detail">
-    <div class="markdown-body">
-      <markdown></markdown>
+    <l-header :isDark="true"></l-header>
+    <div class="container">
+      <div class="detail">
+        <div class="content" v-for="(item, index) in detail" :key="index">
+          <div class="img" v-if="item.type === 'img'"><img :src="item.content"/></div>
+          <div class="title" v-else-if="item.type === 'title'">{{ item.content }}</div>
+          <div class="text" v-else>{{ item.content }}</div>
+        </div>
+      </div>
     </div>
+    <l-footer></l-footer>
   </div>
 </template>
 
 <script>
 
-import BlogModel from '@/models/Blog'
-import Markdown from '/public/md/test1.md'
+  import LHeader from '@/components/LHeader'
+  import LFooter from '@/components/LFooter'
+  import BlogModel from '@/models/Blog'
+  import CardModel from '@/models/Card'
 
-export default {
-  name: 'BlogDetail',
-  components: { Markdown },
-  data () {
-    return {
-      
+  export default {
+    name: 'BlogDetail',
+    components: { LHeader, LFooter },
+    data () {
+      return {
+        detail: {},
+        titleInfo: {}
+      }
+    },
+    async created () {
+      this.stringId = this.$route.params.id
+      let index = this.stringId.indexOf('_')
+      let sign = this.stringId.substring('', index)
+      let id = this.stringId.substring(index + 1)
+      let titleInfos = []
+      let titleInfo = {}
+      let tempDetail = {}
+
+      if (sign === 'blog') {
+        tempDetail = await BlogModel.getDetail()
+        titleInfos = await BlogModel.getData()
+      } else if (sign === 'card') {
+        tempDetail = await CardModel.getDetail()
+        titleInfos = await CardModel.getData()
+      }
+
+      titleInfo = titleInfos.find((item) => {
+        return item.id === id
+      })
+
+      this.detail = tempDetail[id]
+      this.titleInfo = titleInfo
+
+      console.log('this.detail', this.detail)
+      console.log('this.titleInfo', this.titleInfo)
     }
-  },
-  async created () {
-    let data = await BlogModel.getData()
-    console.log('data', data)
-  },
-  mounted () {
-    
   }
-}
 </script>
 
 <style lang="scss" scoped>
-  .markdown-body {
-		box-sizing: border-box;
-		min-width: 200px;
-		max-width: 980px;
-		margin: 0 auto;
-		padding: 45px;
-	}
+  .blog-detail {
+    width: 100%;
+    padding-top: 100px;
+  }
 
-	@media (max-width: 767px) {
-		.markdown-body {
-			padding: 15px;
-		}
-	}
+  .detail, .content {
+    width: 100%;
+  }
 
-  // ::v-deep .hljs-keyword {
-  //   color: red;
-  // }
+  .container {
+    padding-bottom: 100px;
+  }
 
-  // ::v-deep .markdown-body pre {
-  //   background: red;
-  //   border: 1px solid green;
-  //   border-radius: 100px;
-  // }
+  .title {
+    color: #161616;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .text {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .img {
+    width: 100%;
+    margin: 30px 0;
+    img {
+      width: 100%;
+    }
+  }
+
 </style>
