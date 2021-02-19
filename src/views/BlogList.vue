@@ -46,12 +46,17 @@
 
     async created () {
       this.blogs = await BlogModel.getData()
-      this.cards = await CardModel.getData()
+      let cards = await CardModel.getData()
+      if (cards.length > 2) {
+        this.cards = cards.splice(this.cards.length - 2)
+      } else {
+        this.cards = cards
+      }
     },
     methods: {
       toDetail (item, type) {
-        console.log('type', type)
-        console.log('item', item)
+        // console.log('type', type)
+        // console.log('item', item)
         this.$router.push({
           path: `/blogDetail/${type}_${item.id}`
         })
