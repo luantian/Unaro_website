@@ -13,7 +13,7 @@
         <div class="context-title">Vision</div>
         <div class="context-text">Unaro is a flexible, developer-friendly, transactional database delivered to you as a secure, web-native API. Never again worry about database provisioning, maintenance, scaling correctness.</div>
       </div>
-      <div class="container context-item">
+      <div class="container context-item" style="border: none;">
         <div class="context-title">Culture</div>
         <div class="context-text">Unaro is a flexible, developer-friendly, transactional database delivered to you as a secure, web-native API. Never again worry about database provisioning, maintenance, scaling correctness.</div>
       </div>
@@ -61,14 +61,13 @@
   }
 
   .context {
-    background: #F6F7F9;
+    background: #f7f7f7;
   }
 
   .context-title {
     height: 64px;
     line-height: 64px;
     font-size: 42px;
-    font-family: PingFangSC-Thin, PingFang SC;
     font-weight: 100;
     color: #333333;
   }

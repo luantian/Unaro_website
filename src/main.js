@@ -17,6 +17,8 @@ import 'highlight.js/styles/github.css'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/ambiance.css'
 import 'codemirror/theme/cobalt.css'
+import 'codemirror/theme/eclipse.css'
+
 import 'codemirror/mode/javascript/javascript'
 
 import ElementUI from 'element-ui';

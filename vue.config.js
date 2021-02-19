@@ -5,6 +5,7 @@ const proxyUrl = 'http://192.168.101.205:9091';
 module.exports = {
   productionSourceMap: false,
   devServer: {
+    disableHostCheck: true,
     proxy: {
       '/api': {  //使用"/api"来代替"http://f.apiplus.c"
         target: proxyUrl, //源地址
@@ -18,11 +19,11 @@ module.exports = {
 
   css: {
     loaderOptions: {
-        sass: {
-            prependData: `@import "./src/scss/global.scss";`,
-        },
+      sass: {
+        prependData: `@import "./src/scss/global.scss";`,
+      },
     },
-},
+  },
 
   chainWebpack: config => {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

@@ -4,16 +4,19 @@
     <div class="container">
       <l-title>Featured Posts</l-title>
       <div class="cards">
-        <l-card v-for="(item, index) in cards" :key="index" :dataSource="item"></l-card>
+        <div v-for="(item, index) in cards" :key="index" @click="toDetail(item, 'card')">
+          <l-card :dataSource="item"></l-card>
+        </div>
       </div>
-      
     </div>
     
     <div class="bg7">
       <div class="container">
         <l-title>More Posts</l-title>
         <div class="blog-lst">
-          <blog-list-item v-for="(item, index) in blogs" :key="index" :dataSource="item" :isLine="index !== blogs.length - 1"></blog-list-item>
+          <div v-for="(item, index) in blogs" :key="index" @click="toDetail(item, 'blog')">
+            <blog-list-item :dataSource="item" :isLine="index !== blogs.length - 1"></blog-list-item>
+          </div>
         </div>
       </div>
     </div>
@@ -44,6 +47,15 @@
     async created () {
       this.blogs = await BlogModel.getData()
       this.cards = await CardModel.getData()
+    },
+    methods: {
+      toDetail (item, type) {
+        console.log('type', type)
+        console.log('item', item)
+        this.$router.push({
+          path: `/blogDetail/${type}_${item.id}`
+        })
+      }
     }
   }
 </script>
@@ -51,6 +63,7 @@
 <style lang="scss" scoped>
   .blog-list {
     padding-top: 100px;
+    height: 800px;
   }
 
   .cards {

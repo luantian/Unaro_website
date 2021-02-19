@@ -14,7 +14,7 @@ export default {
   .l-title {
     height: 64px;
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 100;
     color: #333333;
     line-height: 64px;
     padding: 40px 0;

@@ -33,6 +33,13 @@
 <style lang="scss" scoped>
   .blog-list-item {
     display: flex;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    &:hover {
+      top: -6px;
+    }
   }
   .img-wrap {
     width: 320px;

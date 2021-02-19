@@ -54,8 +54,8 @@
       this.detail = tempDetail[id]
       this.titleInfo = titleInfo
 
-      console.log('this.detail', this.detail)
-      console.log('this.titleInfo', this.titleInfo)
+      // console.log('this.detail', this.detail)
+      // console.log('this.titleInfo', this.titleInfo)
     }
   }
 </script>

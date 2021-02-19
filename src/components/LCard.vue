@@ -31,13 +31,21 @@
     box-sizing: border-box;
     box-shadow: 0px 3px 9px 0px #DEE2EE;
     position: relative;
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    &:hover {
+      box-shadow: 0px 3px 9px 0px #c8cad1;
+      top: -6px;
+    }
   }
   .img-wrap {
     width: 530px;
     height: 300px;
-    > img { width: 100%; height: 100%; border-radius: 8px; }
+    > img { width: 100%; height: 100%; border-radius: 4px; }
   }
   .title {
     font-size: 24px;
@@ -49,6 +57,7 @@
   .content {
     font-size: 16px;
     font-weight: 400;
+    height: 90px;
     color: #666666;
     line-height: 22px;
     margin: 12px 0 38px 0;
@@ -57,6 +66,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    letter-spacing: .8px;
   }
   .sign {
     position: absolute;

@@ -5,6 +5,7 @@ import Index from '@/views/Index'
 import BlogList from '@/views/BlogList'
 import BlogDetail from '@/views/BlogDetail'
 import Company from '@/views/Company'
+import Test from '@/views/Test'
 import other from '@/router/other'
 
 Vue.use(Router)
@@ -29,6 +30,11 @@ let routers = [
     path: '/company',
     name: 'Company',
     component: Company
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: Test
   },
   ...other
 ]

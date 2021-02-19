@@ -52,26 +52,25 @@
         <div class="powerful-title">
           The world’s most powerful and <br> easy-to-use Api
         </div>
-
         <div class="l-edit">
           <div class="edit1">
             <codemirror
-              ref="mycode"
-              v-model="curCode"
-              :options="cmOptions"
+              ref="mycode1"
+              v-model="curCode1"
+              :options="cmOptions1"
+              lineNumbers="true"
               class="code"
             ></codemirror>
           </div>
-          <div class="edit1">
+          <div class="edit2">
             <codemirror
-              ref="mycode"
-              v-model="curCode"
-              :options="cmOptions"
+              ref="mycode2"
+              v-model="tempCurCode2"
+              :options="cmOptions2"
               class="code"
             ></codemirror>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -86,6 +85,8 @@
   import LFooter from '@/components/LFooter'
 
   import { codemirror } from 'vue-codemirror'
+  require('codemirror/addon/edit/matchbrackets')
+  require('codemirror/addon/selection/active-line')
 
   export default {
     name: 'Index',
@@ -98,12 +99,26 @@
           'One Platform, One Copy of Data One Platform, One of',
           'One Platform, One Copy of Data One Platform, One of'
         ],
-        curCode: "function",
-        cmOptions: {
+        curCode1: "class Person {\n\tname = 'terence'\n\tage = 18\n\tsex = 0\n\tsetName (name) {\n\t\tthis.name = name\n\t}\n\tgetName () {\n\t\treturn this.name\n\t}\n\tsetAge (age) {\n\t\tthis.age = age\n\t}\n\tgetAge () {\n\t\treturn this.age\n\t}\n\tsetSex (sex) {\n\t\tthis.sex = sex\n\t}\n\tgetSex () {\n\t\treturn this.sex\n\t}\n}",
+        curCode2: "Last login: Thu Feb 18 15:50:33 on ttys001\n",
+        cmOptions1: {
           value: 'aaaaa',
           mode: "javascript",
-          theme: "cobalt"
+          lineNumbers: true,
+          theme: "eclipse",
+          readOnly: true
+        },
+        cmOptions2: {
+          value: 'bbbbbb',
+          mode: "cmd",
+          theme: "cobalt",
+          readOnly: true
         }
+      }
+    },
+    computed: {
+      tempCurCode2 () {
+        return this.curCode2.replace('\n', '\n~ »')
       }
     }
   }
@@ -127,8 +142,8 @@
   }
 
   .banner-img-wrap {
-    width: 266px;
-    height: 255px;
+    width: 328px;
+    height: 328px;
     > img {
       width: 100%;
       height: 100%;
@@ -167,7 +182,7 @@
     color: #333333;
     line-height: 64px;
     text-align: center;
-    padding-bottom: 98px;
+    padding-bottom: 60px;
   }
 
   .product-img-wrap {
@@ -207,5 +222,62 @@
   .edit1, .edit2 {
     flex: 1;
   }
+  ::v-deep .edit1 {
+    .CodeMirror-gutter.CodeMirror-linenumbers {
+      width: 46px !important;
+      background: #EDE0FF;
+      text-align: right;
+    }
+    .CodeMirror-linenumber.CodeMirror-gutter-elt {
+      width: 30px !important;
+    }
+    .cm-s-cobalt .CodeMirror-gutters {
+      border: none;
+    }
+    .cm-s-cobalt .CodeMirror-linenumber {
+      color: #666;
+    }
+    .cm-s-cobalt.CodeMirror {
+      background: #FCF4FE;;
+    }
+  }
+
+  ::v-deep .edit2 {
+    .CodeMirror-linenumber.CodeMirror-gutter-elt {
+      width: 40px !important;
+    }
+    .cm-s-cobalt .CodeMirror-gutters {
+      border: none;
+    }
+    .cm-s-cobalt .CodeMirror-linenumber {
+      color: #666;
+    }
+    .cm-s-cobalt.CodeMirror {
+      background: #621D43;;
+    }
+  }
+
+  ::v-deep {
+    .CodeMirror pre.CodeMirror-line {
+      // padding: 6px 0;
+      line-height: 1.4;
+      padding-left: 12px;
+    }
+
+    .CodeMirror-linenumber {
+      // padding: 6px 0;
+      line-height: 1.4;
+    }
+
+    .CodeMirror-lines {
+      padding: 16px 0;
+    }
+
+    .CodeMirror {
+      height: 516px;
+    }
+  }
+
+   
 
 </style>

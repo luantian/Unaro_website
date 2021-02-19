@@ -58,13 +58,19 @@
   
   .dl {
     color: #666;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 32px 0;
     cursor: pointer;
+    transition: .2s;
+    font-size: 14px;
+    &:hover {
+      color: #999;
+    }
   }
 
   .copyright {
     padding: 24px 0;
+    font-size: 14px;
+    color: #666;
   }
 
 </style>

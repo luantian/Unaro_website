@@ -25,7 +25,7 @@
     },
     data () {
       return {
-        navs: [ { path: '/blogList', title: 'BLOG' }, { path: '/company', title: 'COMPANY' } ]
+        navs: [ { path: '/blogList', title: 'Blog' }, { path: '/company', title: 'Company' } ]
       }
     }
   }
@@ -49,8 +49,12 @@
     .logo {
       width: 70px;
       height: 18px;
-      margin-right: 64px;
+      padding-right: 34px;
       cursor: pointer;
+      transition: .2s;
+      &:hover {
+        opacity: .4;
+      }
       > img {
         width: 100%;
         height: 100%;
@@ -63,12 +67,22 @@
     display: flex;
     color: #fff;
     .nav {
-      margin-right: 64px;
+      // margin-right: 64px;
       cursor: pointer;
+      padding: 0 30px;
+      transition: .2s;
+      &:hover {
+        color: #c9c7c7;
+      }
     }
   }
 
   .header.dark .navs {
     color: #161616;
+    .nav {
+      &:hover {
+        color: #999;
+      }
+    }
   }
 </style>
