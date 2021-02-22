@@ -2,7 +2,7 @@
   <div :class="['header', { 'dark': isDark }]">
     <div class="container">
       <router-link class="logo" tag="div" to="/">
-        <img :src="`/img/logo_${isDark ? 'dark' : 'white'}@2x.png`" alt="">
+        <img :src="`/img/logo_${isDark ? 'dark' : 'white'}@2x.svg`" alt="">
       </router-link>
       <div class="navs">
         <router-link class="nav" tag="div" :to="item.path" v-for="(item, index) in navs" :key="index">
@@ -47,8 +47,8 @@
     left: 0;
     bottom: 0;
     .logo {
-      width: 70px;
-      height: 18px;
+      width: 50px;
+      height: 13px;
       padding-right: 34px;
       cursor: pointer;
       transition: .2s;

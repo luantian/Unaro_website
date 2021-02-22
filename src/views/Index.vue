@@ -63,12 +63,13 @@
             ></codemirror>
           </div>
           <div class="edit2">
-            <codemirror
+            <!-- <codemirror
               ref="mycode2"
               v-model="tempCurCode2"
               :options="cmOptions2"
               class="code"
-            ></codemirror>
+            ></codemirror> -->
+            <img style="width: 100%; height: 100%;" src="/img/23.png" alt="">
           </div>
         </div>
       </div>
@@ -217,11 +218,22 @@
 
   .l-edit {
     display: flex;
+    justify-content: space-between;
   }
 
   .edit1, .edit2 {
-    flex: 1;
+    // flex: 1;
+    width: 49.6%;
+    box-shadow: 0px 4px 12px 0px #D4CED5;
   }
+
+  ::v-deep .CodeMirror-scroll {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    background: #FCF4FE;;
+  }
+
   ::v-deep .edit1 {
     .CodeMirror-gutter.CodeMirror-linenumbers {
       width: 46px !important;
@@ -274,10 +286,7 @@
     }
 
     .CodeMirror {
-      height: 516px;
+      height: 560px;
     }
   }
-
-   
-
 </style>
