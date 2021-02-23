@@ -1,9 +1,9 @@
 const path = require('path')
-const proxyUrl = 'http://192.168.101.205:9091';
-
+const proxyUrl = '';
 
 module.exports = {
   productionSourceMap: false,
+  publicPath:'./',
   devServer: {
     disableHostCheck: true,
     proxy: {

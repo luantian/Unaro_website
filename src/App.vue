@@ -15,6 +15,7 @@
 <style lang="scss" scoped>
 
   #app {
+    min-width: 1200px;
     width: 100%;
     height: 100%;
     display: flex;
