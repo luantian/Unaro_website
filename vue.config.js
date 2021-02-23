@@ -4,18 +4,18 @@ const proxyUrl = '';
 module.exports = {
   productionSourceMap: false,
   publicPath:'./',
-  devServer: {
-    disableHostCheck: true,
-    proxy: {
-      '/api': {  //使用"/api"来代替"http://f.apiplus.c"
-        target: proxyUrl, //源地址
-        changeOrigin: true, //改变源
-        pathRewrite: {
-          '^/api': '/' //路径重写
-        }
-      }
-    }
-  },
+  // devServer: {
+  //   disableHostCheck: true,
+  //   proxy: {
+  //     '/api': {  //使用"/api"来代替"http://f.apiplus.c"
+  //       target: proxyUrl, //源地址
+  //       changeOrigin: true, //改变源
+  //       pathRewrite: {
+  //         '^/api': '/' //路径重写
+  //       }
+  //     }
+  //   }
+  // },
 
   css: {
     loaderOptions: {
